@@ -22,4 +22,6 @@ const restoreCat = () => {
 };
 
 cat1.addEventListener("mousedown", changeCat);
+document.addEventListener("keydown",changeCat);
 cat1.addEventListener("mouseup", restoreCat);
+document.addEventListener("keyup",restoreCat);
