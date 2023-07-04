@@ -1,7 +1,7 @@
 const cat1 = document.querySelector(".cat1");
 const scoreDisplay = document.querySelector(".score");
 
-let score = 0;
+let score = localStorage.getItem("score",) ;
 let isClicked = false; // 클릭 상태를 저장하는 변수
 let previousSrc = cat1.src;
 
@@ -11,8 +11,11 @@ const changeCat = () => {
         cat1.src ="https://i.pinimg.com/564x/b4/5f/6a/b45f6a22a04be2f1022ff81808590cc2.jpg";
         score++;
         scoreDisplay.textContent = score;
+        
+        const audio = new Audio('./bbyk.mp3');
+        audio.play();
     }
-};
+};  
 
 const restoreCat = () => {
     if (isClicked) {
