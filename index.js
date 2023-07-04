@@ -7,24 +7,26 @@ let previousSrc = cat1.src;
 
 const changeCat = () => {
     if (!isClicked) {
-        isClicked = true; // 클릭 상태로 변경
-        cat1.src = "https://i.pinimg.com/564x/b4/5f/6a/b45f6a22a04be2f1022ff81808590cc2.jpg";
-        score++;
+        if (score % 100 === 0) {
+            cat1.src = "./cat3.png";
+        } else {
+            cat1.src = "./cat2.png";
+        }
         
+        isClicked = true; // 클릭 상태로 변경
+        score++;
         const audio = new Audio('./bbyk.mp3');
         audio.play();
-        
         // 로컬 스토리지에 점수 저장
         localStorage.setItem("score", score);
         scoreDisplay.textContent = score;
     }
 };
 
-
-window.addEventListener('load',() => {
+window.addEventListener('load', () => {
     score = localStorage.getItem('score');
     scoreDisplay.textContent = score;
-})
+});
 
 const restoreCat = () => {
     if (isClicked) {
