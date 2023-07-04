@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-body {
-
-}
-
 #popcat {
     display: flex;
     flex-direction: column;
@@ -18,4 +14,10 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
+    font-size:55px;
+}
+
+.cat1 {
+    width: 650px;
+    height: 650px;
 }
