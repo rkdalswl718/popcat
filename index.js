@@ -1,5 +1,6 @@
 const cat1 = document.querySelector(".cat1");
 const scoreDisplay = document.querySelector(".score");
+const resetBtn = document.querySelector(".reset");
 
 let score; // 로컬 스토리지에서 점수 불러오기
 let isClicked = false; // 클릭 상태를 저장하는 변수
@@ -19,7 +20,7 @@ const changeCat = () => {
         audio.play();
         // 로컬 스토리지에 점수 저장
         localStorage.setItem("score", score);
-        scoreDisplay.textContent = score;
+        scoreDisplay.textContent = score; 
     }
 };
 
@@ -33,9 +34,17 @@ const restoreCat = () => {
         cat1.src = previousSrc; // 이전 이미지로 변경
         isClicked = false; // 클릭 상태 해제
     }
+
 };
+
+const reset = () => {
+        localStorage.clear();
+        score = 0;
+        scoreDisplay.textContent = score;
+}
 
 cat1.addEventListener("mousedown", changeCat);
 document.addEventListener("keydown", changeCat);
 cat1.addEventListener("mouseup", restoreCat);
 document.addEventListener("keyup", restoreCat);
+resetBtn.addEventListener("click", reset);
