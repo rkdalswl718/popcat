@@ -36,7 +36,7 @@ const restoreCat = () => {
     }
 };
 
-const reset = () => {
+const reset = () => { 
         localStorage.clear();
         score = 0;
         scoreDisplay.textContent = score;
