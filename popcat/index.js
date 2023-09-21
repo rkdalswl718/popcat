@@ -27,7 +27,7 @@ const changeCat = () => {
 window.addEventListener('load', () => {
     score = localStorage.getItem('score');
     scoreDisplay.textContent = score;
-});
+}); 
  
 const restoreCat = () => {
     if (isClicked) {
