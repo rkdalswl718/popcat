@@ -22,7 +22,7 @@ const changeCat = () => {
         localStorage.setItem("score", score);
         scoreDisplay.textContent = score; 
     }
-};
+}; 
 
 window.addEventListener('load', () => {
     score = localStorage.getItem('score');
