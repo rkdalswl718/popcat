@@ -29,6 +29,7 @@ window.addEventListener('load', () => {
     scoreDisplay.textContent = score;
 });
 
+
 const restoreCat = () => {
     if (isClicked) {
         cat1.src = previousSrc; // 이전 이미지로 변경
