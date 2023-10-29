@@ -34,7 +34,6 @@ const restoreCat = () => {
         cat1.src = previousSrc; // 이전 이미지로 변경
         isClicked = false; // 클릭 상태 해제
     }
-
 };
 
 const reset = () => {
